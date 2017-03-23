@@ -1,4 +1,4 @@
-package com.sothawo.securest;
+package com.hendisantika.securest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

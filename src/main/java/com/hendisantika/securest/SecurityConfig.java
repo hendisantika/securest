@@ -3,7 +3,7 @@
  *
  * http://www.sothawo.com
  */
-package com.sothawo.securest;
+package com.hendisantika.securest;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

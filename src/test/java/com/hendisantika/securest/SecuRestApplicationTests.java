@@ -1,4 +1,4 @@
-package com.sothawo.securest;
+package com.hendisantika.securest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

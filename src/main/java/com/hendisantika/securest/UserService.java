@@ -3,7 +3,7 @@
  *
  * http://www.sothawo.com
  */
-package com.sothawo.securest;
+package com.hendisantika.securest;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
