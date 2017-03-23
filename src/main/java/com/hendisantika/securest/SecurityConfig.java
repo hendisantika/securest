@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2015 sothawo
- *
- * http://www.sothawo.com
- */
 package com.hendisantika.securest;
 
 import org.springframework.context.annotation.Configuration;
