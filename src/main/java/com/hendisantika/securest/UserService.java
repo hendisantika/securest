@@ -2,11 +2,7 @@ package com.hendisantika.securest;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Sample service.
@@ -18,21 +14,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/service")
 public class UserService {
 
-    @RequestMapping(value = "echo/{in}", method = RequestMethod.GET)
+    @GetMapping("echo/{in}")
     public String echo(@PathVariable(value = "in") final String in, @AuthenticationPrincipal final UserDetails user) {
         return "Hello " + user.getUsername() + ", you said: " + in;
     }
 
-    @RequestMapping(value = "post", method = RequestMethod.POST)
+    @PostMapping("post")
     public void post(@RequestBody final String in, @AuthenticationPrincipal final UserDetails user) {
         System.out.println("User " + user.getUsername() + " posting " + in);
     }
 
-    @RequestMapping(value = "put", method = RequestMethod.PUT)
+    @PutMapping("put")
     public void put(@RequestBody final String in, @AuthenticationPrincipal final UserDetails user) {
         System.out.println("User " + user.getUsername() + " putting " + in);
     }
-    @RequestMapping(value = "delete/{in}", method = RequestMethod.DELETE)
+
+    @DeleteMapping("delete/{in}")
     public void delete(@PathVariable(value = "in") final String in, @AuthenticationPrincipal final UserDetails user) {
         System.out.println("User " + user.getUsername() + " deleting " + in);
     }
